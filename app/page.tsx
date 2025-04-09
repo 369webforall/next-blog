@@ -1,5 +1,6 @@
 import React from "react";
 import { prisma } from "@/prisma/prisma";
+
 async function getData() {
   const data = await prisma.blogPost.findMany({
     select: {
