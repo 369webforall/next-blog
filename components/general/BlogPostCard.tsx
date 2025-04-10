@@ -10,6 +10,7 @@ interface blogPost {
     authorName: string;
     authorImage: string;
     createdAt: Date;
+    updatedAt: Date;
   };
 }
 const BlogPostCard = ({ data }: blogPost) => {

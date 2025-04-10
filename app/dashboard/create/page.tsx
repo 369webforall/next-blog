@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import {
   Card,
@@ -10,8 +9,8 @@ import {
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 import { handleSubmission } from "@/app/actions";
+import SubmitButton from "@/components/general/SubmitButton";
 const CreateBlog = () => {
   return (
     <div>
@@ -34,7 +33,7 @@ const CreateBlog = () => {
               <Label>ImageUrl</Label>
               <Input name="url" type="text" placeholder="Image Url" />
             </div>
-            <Button className="cursor-pointer">Create Post</Button>
+            <SubmitButton />
           </form>
         </CardContent>
       </Card>
