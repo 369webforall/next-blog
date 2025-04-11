@@ -11,6 +11,7 @@ async function getData() {
       authorImage: true,
       authorName: true,
       createdAt: true,
+      updatedAt: true,
     },
   });
   return data;

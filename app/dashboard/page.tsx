@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { prisma } from "@/prisma/prisma";
-import { notFound, redirect } from "next/navigation";
-import { auth } from "@/auth";
+import { notFound } from "next/navigation";
+
 import BlogPostCard from "@/components/general/BlogPostCard";
 async function getData() {
   const data = await prisma.blogPost.findMany({
@@ -15,7 +15,7 @@ async function getData() {
       authorImage: true,
       authorName: true,
       createdAt: true,
-      updateAt: true,
+      updatedAt: true,
     },
   });
   if (!data) return notFound();
