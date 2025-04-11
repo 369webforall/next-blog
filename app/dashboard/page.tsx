@@ -5,13 +5,15 @@ import { prisma } from "@/prisma/prisma";
 import { notFound } from "next/navigation";
 
 import BlogPostCard from "@/components/general/BlogPostCard";
-async function getData() {
+import { BlogPost } from "@prisma/client";
+async function getData(): Promise<BlogPost[]> {
   const data = await prisma.blogPost.findMany({
     select: {
       id: true,
       title: true,
       content: true,
       imageUrl: true,
+      authorId: true,
       authorImage: true,
       authorName: true,
       createdAt: true,
